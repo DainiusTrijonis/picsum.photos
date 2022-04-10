@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html Lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0 />
+        <link rel="stylesheet" href="style.css">
+        <title>Visma</title>
+    </head>
+    <body>
+        <div class="main">
+            <div id = 'leftCol' class = "leftCol">
+                <div id = "imgList" class = "imgList">
+                </div>
+                <div id = "pagination" class="pagination">
+                    <button onclick=previousPage() id = "previousPage" hidden>&laquo;</button>
+                    <button id = "currentPage" class="active">1</button>
+                    <button onclick=nextPage() id = "nextPage">&raquo;</button>
+                </div>
+            </div>
+
+            <div class = "rightCol">
+                <div class = "focusImgContainer">
+                    <img class = "focusImg" id = 'img'>
+                </div>
+                <footer hidden id = "rightColFooter" >
+                    <div  class = "flex">
+                        <div class = "imgOptions">
+                            <div>
+                                <label for = "grayscale">Grayscale</label>
+                                <input type = "checkbox" id="grayscale" name="Grayscale">
+                            </div>
+                            <div>
+                                <label for = "blur">Blur</label>
+                                <input type = "range" id="blur" name="Blur"
+                                    min= "1" max="10" value="1" 
+                                >
+                            </div>
+                        </div>
+                        <div class = "data">
+                            <div>
+                                <div id="author"></div>
+                            </div>
+                            <div style="display: flex; flex-direction: row;">
+                                <div id="width"></div>
+                                x
+                                <div id="height"></div>  
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

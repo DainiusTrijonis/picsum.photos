@@ -1,0 +1,93 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  max-height:100%;
+}
+
+.leftCol {
+  display:flex; 
+  flex-direction:column;
+}
+
+footer {
+  padding: 5px;
+  margin: auto;
+  width: 100%;
+}
+
+.imgList {
+  overflow: scroll;
+}
+
+.listItem{
+  display:flex; 
+  flex-direction:column;
+  width: 200px;
+  height: 200px
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.focusImg {
+  height: 100%;
+  width: 100%; 
+  object-fit: contain;
+  pointer-events: none;
+}
+.focusImgContainer {
+  height:90%;
+}
+
+.rightCol {
+  display:flex; 
+  flex-direction:column;
+  width: 100%;
+  max-height: 100%;
+}
+
+.flex {
+  display: flex; 
+  justify-content:space-evenly;
+}
+
+.imgOptions {
+  display: flex;
+  flex-direction: row;
+}
+
+.data {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+}
+
+.pagination {
+  display: inline-block;
+  max-width: 200px;
+  align-self: center;
+  justify-content: space-evenly;
+}
+
+.pagination button {
+  border: none;
+  background: none;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination button.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination button:hover:not(.active) {background-color: #ddd;}
